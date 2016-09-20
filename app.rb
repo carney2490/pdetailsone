@@ -17,7 +17,22 @@ end
 post '/age' do
 	age = params[:age]
 	name = params[:retrieved_name]
-	"Congrats #{name} on surviving #{age} way to survive!"
+	redirect '/3_fav_nums?name=' + name + "&age=" + age
+end 
+
+get '/3_fav_nums' do
+	name = params[:name]
+	age = params[:age]
+	erb :get_fav, :locals => {:name => name, :age => age}
+end
+
+post '/3_fav_nums' do
+	age = params[:age]
+	name = params[:name]
+	fav1 = params[:users_fav1]
+	fav2 = params[:users_fav2]
+	fav3 = params[:users_fav3]
+	"Mahalo #{name}.  Your favorite numbers are #{fav1}, #{fav2}, #{fav3} and the do not add up to #{age}."
 end 
 
 # get '/hair' do
@@ -29,3 +44,4 @@ end
 # 	hair = params[:hair]
 # end
 
+# "Congrats #{name} on surviving #{age} way to keep on keepin on!"

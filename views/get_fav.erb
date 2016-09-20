@@ -1,0 +1,10 @@
+Okay <%= name %>, what are your three favorite single digit numbers?  I wonder if they add up to <%= age %>...
+
+<form method = "post" action = "/3_fav_nums">
+	<input type = "number" max = 9 min = 0 name = "users_fav1">
+	<input type = "number" max = 9 min = 0 name = "users_fav2">
+	<input type = "number" max = 9 min = 0 name = "users_fav3">
+	<input type="text" name = "name" value = <%= name %> hidden>
+	<input type="text" name = "age" value = <%= age %> hidden>
+	<input type = "submit">
+</form>
