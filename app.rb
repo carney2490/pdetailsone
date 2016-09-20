@@ -1,5 +1,5 @@
 require 'sinatra'
-
+   
 get '/' do
-	"I did it my way."
+	erb :get_name
 end
