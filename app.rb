@@ -1,3 +1,4 @@
+require_relative 'addfunc.rb'
 require 'sinatra'
    
 get '/' do # / is the root and everything after it is following the root
@@ -32,7 +33,8 @@ post '/3_fav_nums' do
 	fav1 = params[:users_fav1]
 	fav2 = params[:users_fav2]
 	fav3 = params[:users_fav3]
-	"Mahalo #{name}.  Your favorite numbers are #{fav1}, #{fav2}, #{fav3} and the do not add up to #{age}."
+	sum = add(fav1.to_i, fav2.to_i, fav3.to_i)
+	"Mahalo #{name}.  Your favorite numbers are #{fav1}, #{fav2}, #{fav3} and they do not add up to #{age}, but add up to #{sum}."
 end 
 
 # get '/hair' do
