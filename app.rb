@@ -43,14 +43,3 @@ post '/3_fav_nums' do
 	end
 end
  
-
-# get '/hair' do
-# 	hair = params[:hair]
-# 	erb :get_hair, :locals => {:age => age}
-# end
-
-# post "/the_users_hair" do
-# 	hair = params[:hair]
-# end
-
-# "Congrats #{name} on surviving #{age} way to keep on keepin on!"
