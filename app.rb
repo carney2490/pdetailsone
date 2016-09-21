@@ -34,8 +34,15 @@ post '/3_fav_nums' do
 	fav2 = params[:users_fav2]
 	fav3 = params[:users_fav3]
 	sum = add(fav1.to_i, fav2.to_i, fav3.to_i)
-	"Mahalo #{name}.  Your favorite numbers are #{fav1}, #{fav2}, #{fav3} and they do not add up to #{age}, but add up to #{sum}."
-end 
+	if sum.to_i == age.to_i
+		"Amazing #{name}!  Your favorite numbers #{fav1}, #{fav2}, #{fav3} add up to your age of #{age}!"
+	elsif sum.to_i > age.to_i
+		"Interesting #{name}, you young buck!  Your favorite numbers #{fav1}, #{fav2}, #{fav3} when added togeter is #{sum} and is less than your age #{age}."
+	else 
+		"Mahalo #{name}.  Your favorite numbers are #{fav1}, #{fav2}, #{fav3} add up to #{sum}, and are infact less than your age #{age}."
+	end
+end
+ 
 
 # get '/hair' do
 # 	hair = params[:hair]
