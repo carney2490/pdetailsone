@@ -43,3 +43,8 @@ post '/3_fav_nums' do
 	end
 end
  
+# 404 Error!
+not_found do
+  status 404
+  erb :oops
+end
